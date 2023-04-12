@@ -1,0 +1,39 @@
+<h1>{{title}}</h1>
+<h2>{{contador}}</h2>
+<button (click)="aumentar()">Aumentar</button>
+<button (click)="reducir()">Reducir</button>
+<button (click)="multiplicar()">Multiplicar</button>
+<button (click)="dividir()">Dividir</button>
+<button (click)="resetear()">Reset</button>
+<br>
+<br>
+<br>
+<span>¿Es mayor a 10? {{contador > 10}}</span>
+<br>
+<span>¿Es menor a 20? {{contador < 20}}</span>
+<br>
+<span>¿Es mayor o igual a 5? {{contador >= 5}}</span>
+<br>
+<span>¿Es menor o igual a 4? {{contador <= 4}}</span>
+<br>
+<span>¿Es igual a 6? {{contador === 6}}</span>
+<br>
+<span>¿Es diferente de 3? {{contador !== 3}}</span>
+<br>
+<span>¿Es par? {{esPar(contador)}}</span>
+<br>
+<span>¿Es impar y es igual a 5? {{!esPar (contador) && (contador===5)}}</span>
+<br>
+<span>¿Es impar o es igual a 7? {{!esPar (contador) || (contador===5)}}</span>
+<br>
+<span>Fahrenheit : {{contador -32 *5/9 }}</span>
+<br>
+<span>{{estudiantes}}</span>
+<br>
+<span>{{estudiantes [1]}}</span>
+<br>
+<span>{{estudiantes.length}}</span>
+<br>
+<span>{{estudiantes[estudiantes.length - 1]}}</span>
+<br>
+<span>{{estudiantes.sort()}}</span>
