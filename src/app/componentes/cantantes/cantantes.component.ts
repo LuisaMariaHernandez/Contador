@@ -8,6 +8,10 @@ import { Cantante } from 'src/app/Models/cantante.model';
 })
 export class CantantesComponent implements OnInit {
 
+  inputNombre:string="";
+  inputEdad:number=0;
+  inputVivo:boolean=false;
+
 
   cantantes:Cantante[] = [
     {
@@ -112,10 +116,24 @@ export class CantantesComponent implements OnInit {
 
     let potencia=this.cantantes.map(cantante => Math.pow (cantante.edad,2) );
     console.log(potencia);
-
-
-
   }
+  agregarCantante(){
+    console.log("funcion click");
+    let nuevoCantante:Cantante={
+      nombre:this.inputNombre,
+      edad:this.inputEdad,
+      vivo:this.inputVivo,
+    
+    }
+    this.cantantes.push(nuevoCantante);
+    this.reset();
+  }
+
+  reset()[
+    this.inputEdad();
+    this.inputNombre();
+    this.inputVivo();
+  ]
 
 }
 
